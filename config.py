@@ -1,0 +1,2 @@
+AUDD_API_KEY = "YOUR_AUDD_API_KEY"
+DATABASE_PATH = "tracks.db"
