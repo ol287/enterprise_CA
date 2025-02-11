@@ -1,2 +1,0 @@
-AUDD_API_KEY = "43f2af23783ccafdb2339656bc5501f3"
-DATABASE_PATH = "tracks.db"
