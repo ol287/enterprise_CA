@@ -1,0 +1,38 @@
+API gateway
+
+     POST   /tracks/add          →       Track Catalogue Service        →    200 OK / 400 Bad Request
+    {"track_name": "..."}                (hexagon shape)                        {"message": "Track added"}
+
+     DELETE  /tracks/remove       →       Track Catalogue Service        →    200 OK / 404 Not Found
+    {"track_name": "..."}                (hexagon shape)                        {"message": "Track removed"}
+
+     GET   /tracks/list           →       Track Catalogue Service        →    200 OK
+    (no input)                           (hexagon shape)                        {"tracks": ["Song A", "Song B"]}
+
+
+audio recognition Service
+
+         POST   /recognize          →       Audio Recognition Service        →    200 OK / 400 Bad Request
+        {"audio_fragment": "..."}          (hexagon shape)                        {"track_name": "Song A"}
+
+track Catalogue srvice:
+         POST   /tracks/add          →       Track Catalogue Service        →    200 OK / 400 Bad Request
+        {"track_name": "..."}                (hexagon shape)                        {"message": "Track added"}
+
+         DELETE  /tracks/remove       →       Track Catalogue Service        →    200 OK / 404 Not Found
+        {"track_name": "..."}                (hexagon shape)                        {"message": "Track removed"}
+
+         GET   /tracks/list           →       Track Catalogue Service        →    200 OK
+        (no input)                           (hexagon shape)                        {"tracks": ["Song A", "Song B"]}
+
+databse service:
+
+         POST   /tracks/add          →       Database Microservice        →    200 OK / 400 Bad Request
+        {"title": "...", "artist": "...", "album": "...", "genre": "...", "duration": ...}  
+                                           (hexagon shape)                     {"message": "Track added", "id": ...}
+
+         GET   /tracks/list           →       Database Microservice        →    200 OK
+        (no input)                           (hexagon shape)                     {"tracks": [{"id": 1, "title": "...", "artist": "..."}]}
+
+         DELETE  /tracks/remove       →       Database Microservice        →    200 OK / 404 Not Found
+        {"track_id": ...}                    (hexagon shape)                     {"message": "Track removed"}

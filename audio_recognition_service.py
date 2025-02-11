@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-AUDD_API_KEY = "43f2af23783ccafdb2339656bc5501f3"
+AUDD_API_KEY = os.environ["AUDD_API_KEY"]
 
 @app.route("/recognize", methods=["POST"])
 def recognize_audio():
